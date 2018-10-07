@@ -20,9 +20,8 @@ include("get_div_grad.jl")
 root = 0
 
 # Initialize MPI.
-MPI.Init()
-while !MPI.Initialized()
-  sleep(0.1)
+if !MPI.Initialized()
+  MPI.Init()
 end
 comm = MPI.COMM_WORLD
 
