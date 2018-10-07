@@ -21,6 +21,9 @@ root = 0
 
 # Initialize MPI.
 MPI.Init()
+while !MPI.Initialized()
+  sleep(0.1)
+end
 comm = MPI.COMM_WORLD
 
 include("mumps_test_float.jl")

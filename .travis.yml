@@ -13,9 +13,9 @@ matrix:
   allow_failures:
     - julia: nightly
 
-branches:
-  only:
-    - master
+#branches:
+#  only:
+#    - master
 
 before_install:
   - unset DYLD_LIBRARY_PATH
