@@ -11,10 +11,6 @@ julia:
   - 1.1
   - nightly
 
-matrix:
-  allow_failures:
-    - julia: nightly
-
 branches:
   only:
     - master
@@ -52,6 +48,8 @@ install:
     fi
 
 jobs:
+  allow_failures:
+    - julia: nightly
   include:
     - stage: Documentation
       julia: 1.1
